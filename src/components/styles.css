@@ -1,0 +1,46 @@
+
+
+.notification-container{
+    max-width: 730px;
+    width: 100%;
+    margin: 0 auto;
+    font-family: "Plus Jakarta Sans", sans-serif;
+
+}
+
+.msg-container{
+    border: 1px solid rgb(51, 51, 51);
+}
+
+
+.msgTitle{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #F7FAFD;
+    border-radius: 8px;
+    padding: 18px 20px;
+    
+}
+
+.imgprofile{
+    border-radius: 50%;
+}
+
+.name{
+    font-size: 16px;
+    color: #1C202B;
+    font-weight: bold;
+}
+
+.txtMensagem{
+    max-width: 566px;
+    width: 100%;
+    border: 1px solid #DDE7EE;
+    margin: 0 auto;
+    padding: 17px 20px 20px;
+    color: #5E6778;
+    font-size: 16px;
+    line-height: 20.16px;
+    border-radius: 4px;
+}
