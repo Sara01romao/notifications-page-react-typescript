@@ -15,11 +15,11 @@ export const NotificationComp = ({ notifications }:NotificationProps) => {
        {notifications.map(item => (
           <div className="msg-container">
             
-            <div className="msgTitle">
+            <div  className={`msgTitle ${item.status === 'unseen' ? 'unseen' : ''}`} >
                 <img className="imgprofile" width={45} height={45} src="https://images.unsplash.com/photo-1726251654985-b415579cd295?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyNXx8fGVufDB8fHx8fA%3D%3D" alt="" />
                 
                 <p><span className="name">Rizky Hasanuddi </span> <span>sent you a private message</span></p>
-            
+                {item.status === 'unseen' ? (<span className="unseen-detalhe"></span>) : ''}
               </div>
 
               <div className="txtMensagem">
