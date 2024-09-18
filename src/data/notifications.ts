@@ -23,7 +23,7 @@ export const notifications: Notification[] = [
       postName: null,
       date: "2024-09-17",
       img: null,
-      status: "seen",
+      status: "unseen",
       text: null,
     },
     {
@@ -59,7 +59,7 @@ export const notifications: Notification[] = [
       postName: "New gadget unboxing",
       date: "2024-09-14",
       img: "post2.jpg",
-      status: "unseen",
+      status: "seen",
       text: null,
     },
     {
@@ -71,7 +71,7 @@ export const notifications: Notification[] = [
       postName: "5 end-game strategies to increase your win rate",
       date: "2024-09-14",
       img: null,
-      status: "unseen",
+      status: "seen",
       text: null,
     },
     {
@@ -83,7 +83,7 @@ export const notifications: Notification[] = [
       postName: null,
       date: "2024-09-14",
       img: null,
-      status: "unseen",
+      status: "seen",
       text: null,
     }
   ];
