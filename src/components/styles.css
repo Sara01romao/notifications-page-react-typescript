@@ -1,4 +1,8 @@
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 .notification-container{
     max-width: 730px;
@@ -57,25 +61,56 @@
     border: 1px solid rgb(51, 51, 51);
 }
 
+.txt-msgTitle{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
 
 .msgTitle{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 20px;
     border-radius: 8px;
     padding: 18px 20px;
+    border: 1px solid red;
+
     
 }
+
 
 .msgTitle.unseen{
    
     background: #F7FAFD;
 }
 
+.txt-msgTitle-container{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-radius: 8px;
+    padding: 18px 20px;
+    border: 1px solid red;
+
+}
+
+.txt-msgTitle{
+    width: 100%;
+}
+
+.postImg-commented{
+    width: 45px;
+    height: 45px;
+}
+
+
 .unseen-detalhe{
   padding: 5px;
   border-radius: 50%;
   background: #F65552;
+  display: inline-block;
 
 }
 
@@ -88,6 +123,22 @@
     font-size: 16px;
     color: #1C202B;
     font-weight: bold;
+}
+
+.postName{
+    color: #5E6778;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.groupName{
+   color: #0A327B;
+   font-weight:800;
+}
+
+.data-notification{
+    color: #939CAD;
+    font-size: 16px;
 }
 
 .txtMensagem{
