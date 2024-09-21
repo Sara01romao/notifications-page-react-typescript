@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Notification } from "../types/notification";
 import './styles.css';
 
-import postImage from '../assets/post2.png';
+
 import { formatDistanceToNow } from "date-fns";
 
 
@@ -48,7 +48,7 @@ export const NotificationComp = ({ notifications }:NotificationProps) => {
             <div  className={`msgTitle ${item.status === 'unseen' ? 'unseen' : ''}`} >
                 
                 <div className="txt-msgTitle-container">
-                  <img className="imgprofile" width={45} height={45} src="https://images.unsplash.com/photo-1726251654985-b415579cd295?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyNXx8fGVufDB8fHx8fA%3D%3D" alt="" />
+                  <img className="imgprofile" width={45} height={45} src={`/assets/${item.profileImg}`}  alt="" />
                   
                   <div className="txt-msgTitle">
                     <p><span className="name">{item.name} </span> <span>{item.reason}</span> {item.postName && (<span className="postName">{item.postName}</span>)}   {item.groupName &&(<span className="groupName">{item.groupName}</span>)}                   {item.status === 'unseen' && (<span className="unseen-detalhe"></span>) }
@@ -63,7 +63,7 @@ export const NotificationComp = ({ notifications }:NotificationProps) => {
 
                 {item.img && (
                   <div>
-                    <img className="postImg-commented" src={postImage} alt="Post Image" />
+                    <img className="postImg-commented" src={`assets/${item.img}`} alt="Post Image" />
                   </div>
                 )}
                 

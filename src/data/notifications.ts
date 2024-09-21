@@ -4,7 +4,7 @@ import { Notification } from "../types/notification";
 export const notifications: Notification[] = [
     {
       id: 1,
-      profileImg: "profile1.jpg",
+      profileImg: "profile1.png",
       name: "Mark Webber",
       reason: "reacted to your recent post",
       groupName: null,
@@ -16,7 +16,7 @@ export const notifications: Notification[] = [
     },
     {
       id: 2,
-      profileImg: "profile2.jpg",
+      profileImg: "profile2.png",
       name: "Angela Gray",
       reason: "followed you",
       groupName: null,
@@ -28,7 +28,7 @@ export const notifications: Notification[] = [
     },
     {
       id: 3,
-      profileImg: "profile3.jpg",
+      profileImg: "profile3.png",
       name: "Jacob Thompson",
       reason: "has joined your group",
       groupName: "Chess Club",
@@ -40,7 +40,7 @@ export const notifications: Notification[] = [
     },
     {
       id: 4,
-      profileImg: "profile4.jpg",
+      profileImg: "profile4.png",
       name: "Rizky Hasanuddin",
       reason: "sent you a private message",
       groupName: null,
@@ -52,19 +52,19 @@ export const notifications: Notification[] = [
     },
     {
       id: 5,
-      profileImg: "profile5.jpg",
+      profileImg: "profile5.png",
       name: "Kimberly Smith",
       reason: "commented on your picture",
       groupName: null,
       postName: "New gadget unboxing",
       date: "2024-09-14",
-      img: "post2.jpg",
+      img: "post2.png",
       status: "seen",
       text: null,
     },
     {
       id: 6,
-      profileImg: "profile6.jpg",
+      profileImg: "profile6.png",
       name: "Nathan Peterson",
       reason: "reacted to your recent post",
       groupName: null,
@@ -76,7 +76,7 @@ export const notifications: Notification[] = [
     },
     {
       id: 7,
-      profileImg: "profile7.jpg",
+      profileImg: "profile7.png",
       name: "Anna Kim",
       reason: "left the group",
       groupName: "Chess Club",
