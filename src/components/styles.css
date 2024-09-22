@@ -6,6 +6,7 @@
 
 body{
     background: #F7FAFD ;
+    padding: 5px;
 }
 
 .notification-container{
@@ -23,6 +24,7 @@ body{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 31px;
+    flex-wrap: wrap-reverse;
 }
 
 .count-notification-container{
@@ -68,6 +70,7 @@ body{
     /* border: 1px solid rgb(51, 51, 51); */
     margin-bottom: 8px;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .txt-msgTitle{
@@ -97,6 +100,7 @@ body{
 
 .msg-container:hover, .msgTitle.unseen:hover{
     background: #f2f8fd;
+    border-radius: 8px;
 }
 
 
@@ -170,4 +174,20 @@ body{
     font-size: 16px;
     line-height: 20.16px;
     border-radius: 4px;
+    
+}
+
+@media screen and (max-width:425px) {
+    .notification-container{
+        padding: 32px;
+    }
+     
+    .header-notification{
+        flex-wrap: wrap-reverse;
+        gap: 20px 5px;
+    }
+
+    .btn-mark-all{
+        margin: 0px 0px 0px auto;
+    }
 }
