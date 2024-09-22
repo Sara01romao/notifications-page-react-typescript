@@ -1,4 +1,4 @@
-import { useState } from 'react'
+
 import { notifications } from './data/notifications'
 import { NotificationComp } from './components/msgNotification'
 
