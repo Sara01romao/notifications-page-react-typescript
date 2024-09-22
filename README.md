@@ -1,3 +1,54 @@
+
+<h2 align="center"> 💻 Página de Noficações </h2> 
+
+<p align="center">
+  
+
+  <img max-width="auto" height="auto"  src="https://github.com/user-attachments/assets/153a6e97-fbec-4282-b10b-7618c1135bc4">
+ 
+
+
+</p> 
+
+
+
+## 💻  Sobre o Projeto
+
+Esta página de notificações em React e TypeScript utiliza um array tipado local de objetos de notificações. Os elementos são gerados dinamicamente com map para renderizar as notificações e reduce para contar as não lidas.
+
+Fonte: Desafio Frontend Mentor
+<br>
+<br>
+<a href="https://notifications-component-page.netlify.app/" target="_blank"><strong>Acessar »</strong></a>
+
+<br>
+
+
+
+
+
+## :rocket: Tecnologias Usadas
+
+
+Front-end 
+```
+Reactjs
+CSS
+TypeScript
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
