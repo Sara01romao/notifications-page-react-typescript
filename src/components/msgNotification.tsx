@@ -12,8 +12,11 @@ type NotificationProps ={
 
 
 export const NotificationComp = ({ notifications }:NotificationProps) => {
-   
+    
+  const [dataNotification, setDataNotification] = useState<Notification[]>(notifications);
   const [totalNotification, setTotalNotification] = useState(0);
+
+  const [openId, setOpenId] = useState<number | null>(null);
 
 //formata data 
   const formatDate = (dateString: string) => {
@@ -22,13 +25,46 @@ export const NotificationComp = ({ notifications }:NotificationProps) => {
   };
 
   useEffect(() => {
-    const total = notifications.reduce((acc, item) => {
+    const total = dataNotification.reduce((acc, item) => {
       return item.status === 'unseen' ? acc + 1 : acc;
     }, 0);
     
     setTotalNotification(total);
+  }, [dataNotification]);
+
+  
+  function handleView(id: number) {
+    const updatedNotifications: Notification[] = dataNotification.map((notification) =>
+      notification.id === id
+        ? { ...notification, status: 'seen' } 
+        : notification
+    );
+  
+    setDataNotification(updatedNotifications); 
+  }
+  
+
+
+  useEffect(() => {
+    setDataNotification(notifications);
   }, [notifications]);
 
+
+  const openMsg = (id: number) => {
+    setOpenId(openId === id ? null : id); 
+  };
+
+
+  
+  function handleViewAll() {
+    const updatedNotifications: Notification[] = dataNotification.map((notification) =>
+      notification.status === "unseen"
+        ? { ...notification, status: 'seen' } 
+        : notification
+    );
+  
+    setDataNotification(updatedNotifications); 
+  }
 
   return (
     <div className="notification-container">
@@ -36,16 +72,17 @@ export const NotificationComp = ({ notifications }:NotificationProps) => {
       <div className="header-notification">
         <div className="count-notification-container">
           <h2>Notifications</h2>
-          <p className="count-notification">{totalNotification}</p>
+          {totalNotification > 0 && ( <p className="count-notification">{totalNotification}</p>)}
+         
         </div>
 
-        <button className="btn-mark-all">Mark all as read</button>
+        <button onClick={handleViewAll} className="btn-mark-all">Mark all as read</button>
       </div>
 
-       {notifications.map(item => (
-          <div className="msg-container" key={item.id}>
+       {dataNotification.map(item => (
+          <div className="msg-container" key={item.id} onClick={() => handleView(item.id)}>
             
-            <div  className={`msgTitle ${item.status === 'unseen' ? 'unseen' : ''}`} >
+            <div onClick={() => openMsg(item.id)}  className={`msgTitle ${item.status === 'unseen' ? 'unseen' : ''}`} >
                 
                 <div className="txt-msgTitle-container">
                   <img className="imgprofile" width={45} height={45} src={`/assets/${item.profileImg}`}  alt="" />
@@ -70,15 +107,12 @@ export const NotificationComp = ({ notifications }:NotificationProps) => {
                 
             </div>
              
-             {item.text && (
-                <div className="txtMensagem">
-                  <p>
-                    Hello, thanks for setting up the Chess Club. I’ve been a member for a few weeks now and I’m already having lots of fun and improving my game.
-                  </p>
-                </div>
 
-
-             )  }
+            {openId === item.id && item.text && (
+              <div className="txtMensagem">
+                <p>{item.text}</p>
+              </div>
+            )}
               
 
               
